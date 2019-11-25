@@ -25,6 +25,7 @@ const useStyles = makeStyles(theme => ({
     outline: 0,
     margin: 'auto',
     padding: '40px',
+    textAlign: 'center'
   },
   icon: {
     flex: 1,
@@ -38,8 +39,8 @@ const useStyles = makeStyles(theme => ({
     userSelect: 'none',
     cursor: 'pointer'
   },
-  test: {
-    // display: 'flex'
+  galleryItemTitle: {
+    margin: 'auto'
   }
 }));
 
@@ -121,6 +122,7 @@ export default function TransitionsModal() {
                 return (
                   <div key={item.index} className={classes.imgRoot}>
                     <img className={classes.img} alt={''} src={item.src} />
+                    <span className={classes.galleryItemTitle}>{item.title}</span>
                   </div>
                 )
               })}
