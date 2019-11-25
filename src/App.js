@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     userSelect: 'none',
     cursor: 'pointer'
   },
-  test:{
+  test: {
     // display: 'flex'
   }
 }));
@@ -115,19 +115,17 @@ export default function TransitionsModal() {
         }}
       >
         <Fade in={open}>
-          <div className={classes.test}>
-            <div className={classes.galleryItemRoot} onClick={handleClose}>
-              <Slider {...settings}>
-                {galleryItems.map(item => {
-                  return (
-                    <div key={item.index} className={classes.imgRoot}>
-                      <img className={classes.img} alt={''} src={item.src} />
-                    </div>
-                  )
-                })}
-              </Slider>
-              <CloseIcon className={classes.closeIcon} onClick={handleCloseIconClick} />
-            </div>
+          <div className={classes.galleryItemRoot} onClick={handleClose}>
+            <Slider {...settings}>
+              {galleryItems.map(item => {
+                return (
+                  <div key={item.index} className={classes.imgRoot}>
+                    <img className={classes.img} alt={''} src={item.src} />
+                  </div>
+                )
+              })}
+            </Slider>
+            <CloseIcon className={classes.closeIcon} onClick={handleCloseIconClick} />
           </div>
         </Fade>
       </Modal>
